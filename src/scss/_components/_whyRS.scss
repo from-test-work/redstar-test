@@ -1,0 +1,37 @@
+/*
+* @section      Components
+* @Components	whyRS
+*/
+
+.whyRS{
+	display: flex;
+	justify-content: space-between;
+	&__asside{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		width: 70px;
+		height: 70px;
+	}
+	&__cnt{
+		width: calc(100% - 70px - 20px);
+		padding-right: 60px;
+	}
+
+	&__title{
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 1.14;
+		color: $black;
+	}
+	&__text{
+		font-family: $OpenSans-font-family;
+	}
+}
+
+.whyRS{
+	* + &__text{
+		margin-top: 10px;
+	}
+}

@@ -1,0 +1,13 @@
+/*
+* @section      Components
+* @Components	Seo Text
+*/
+
+.seoText{
+	width: 620px;
+	margin: 0 auto;
+}
+
+* + .seoText{
+	margin-top: 35px;
+}

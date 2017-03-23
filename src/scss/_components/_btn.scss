@@ -1,0 +1,66 @@
+/*
+* @section      Components
+* @Components	Buttons
+*/
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&--type1,
+	&--type2 {
+		text-transform: uppercase;
+		height: 42px;
+		font-size: 16px;
+		line-height: 1;
+		font-weight: 700;
+		padding: 0 22px;
+		border-radius: 42px;
+	}
+
+	&--type1 {
+		color: $primary;
+		background: $white;
+		border: 2px solid $primary;
+
+	}
+	&--type2 {
+		color: $white;
+		background: $primary;
+	}
+	&--type3 {
+		text-transform: uppercase;
+		height: 54px;
+		font-size: 16px;
+		line-height: 1;
+		font-weight: 700;
+		padding: 0 22px;
+		border-radius: 42px;
+		color: $white;
+		background: $primary;
+	}
+}
+
+.btn {
+	&--type1,
+	&--type2,
+	&--type3{
+		&:hover {
+			background: #DD0C42;
+		}
+	}
+
+	&--type1 {
+		&:hover{
+			color: $white;
+			border: 2px solid #DD0C42;
+		}
+		&:active {
+			border: 2px solid #BB0A38;
+		}
+	}
+
+	&:active {
+		background: #BB0A38;
+	}
+}

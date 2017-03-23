@@ -1,0 +1,40 @@
+/*
+* @section      Components
+* @Components	Info Panel
+*/
+
+.info-panel{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&__btn-wrapp{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__btn-singin{
+		width: 100px;
+	}
+	&__btn-registration{
+		width: 240px;
+	}
+}
+
+.info-panel{
+	&__btn-singin + &__btn-registration{
+		margin-left: 20px;
+	}
+}
+
+@media (max-width: 991px) {
+	.info-panel{
+		flex-direction: column;
+		&__btn-wrapp{
+			order: 3;
+			margin-top: 20px;
+		}
+		&__contact{
+			order: 2;
+			margin-top: 20px;
+		}
+	}
+}

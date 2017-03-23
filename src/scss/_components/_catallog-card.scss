@@ -1,0 +1,115 @@
+/*
+* @section      Components
+* @Components	Catallog Card
+*/
+
+.catallog-card-wraper{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+
+* + .catallog-card-wraper{
+	margin-top: 55px;
+}
+
+.catallog-card{
+	//position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-content: stretch;
+	background: $white;
+	border: 1px solid #eaeeee;
+	transition: 0.3s ease all;
+	height: auto;
+	width: 235px;
+
+	&__head{
+		padding: 20px 20px 0;
+	}
+	&__midle{
+		padding: 0 20px;
+	}
+	&__footer{
+		//position: absolute;
+		padding: 0;
+		//bottom: 0;
+		//width: 100%;
+	}
+
+
+	&__title{
+		font-size: 17px;
+		line-height: 1.12;
+		color: $black;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	&__text{
+		font-family: $OpenSans-font-family;
+		color: $default;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	&__price{}
+	&__fa-ruble{
+		position: relative;
+		&:before{
+			position: absolute;
+			content: '\f158';
+			font-family: $fa;
+			font-size: 14px;
+			line-height: 1;
+			font-weight: 400;
+			color: $default;
+			top: 3px;
+			left: 3px;
+		}
+	}
+	&__info{
+		color: $black;
+		text-transform: uppercase;
+		font-size: 12px;
+		line-height: 1;
+		font-weight: 700;
+		letter-spacing: 1px;
+		padding: 15px 0 17px;
+		transition: .3s all ease;
+	}
+}
+
+.catallog-card{
+	&:hover{
+		box-shadow: 0 10px 20px 0 rgba(88, 59, 133, 0.22);
+		z-index:2;
+		.catallog-card__info{
+			background: $primary;
+			color: $white;
+		}
+	}
+}
+
+.catallog-card{
+	* + &__midle{
+		margin-top: 15px;
+	}
+
+	* + &__footer{
+		margin-top: 10px;
+	}
+
+	* + &__text{
+		margin-top: 2px;
+	}
+
+	* + &__price{
+		margin-top: 10px;
+	}
+	* + &__btn{
+		margin-top: 40px;
+	}
+}

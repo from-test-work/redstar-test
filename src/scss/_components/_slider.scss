@@ -1,0 +1,60 @@
+/*
+* @section      Components
+* @Components	Slider
+*/
+
+.slider-container{
+
+}
+
+.slider-wrapper{}
+
+.slider {
+	display: flex;
+	flex-direction: column;
+	height: 625px;
+	&__nav-list {}
+
+	&__inside-container{
+		width: 700px;
+		margin: 120px auto auto;
+	}
+
+	&__title, &__text{
+		text-align: center;
+		color: $white;
+	}
+
+	&__title {
+		font-size: 50px;
+		font-weight: 500;
+		line-height: 1;
+
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 1.5;
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;;
+	}
+
+	&[data-slide='1'] {
+		background: url("../images/banners/big-banner__1.png") no-repeat center center / cover;
+	}
+}
+
+.slider{
+	* + &__title {
+		margin-top: 10px;
+	}
+	* + &__text {
+		margin-top: 35px;
+	}
+	* + &__btn {
+		margin-top: 85px;
+	}
+}

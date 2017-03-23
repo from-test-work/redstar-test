@@ -1,0 +1,94 @@
+//MAIN
+main.page-content
+    //= Section 1 .well__index--1 =
+    section.well__index--1
+        //= swiper slider =
+        .swiper-container.slider-container
+            .swiper-wrapper.slider-wrapper
+                //-for( var i = 0; i < 2; i++ )
+                //=
+                    slider !{i+1} =
+                .swiper-slide.slider(data-slide='1')
+                    .slider__inside-container
+                        -var navLink = ['Главная', 'Услуги', 'Дилерам'];
+                            ul.slider__nav-list.nav-list
+                                -for( var j = 0; j < navLink.length; j++ )
+                                    li.nav-list__item
+                                        a.nav-list__link(href="#")= navLink[j]
+
+                        .slider__title Оптовая продажа сайтов для творчества
+                        .slider__text Гармонический интервал синхронно диссонирует композиционный рефрен, таким образом, сходные законы контрастирующего развития&nbsp;характерны и для процессов в психике
+                        .slider__btn
+                            a.btn.btn--type2 Заказать звонок
+
+    //= Section 2 .well__index--2 =
+    section.well__index--2.bg-lightBlue
+        //= container =
+        .container
+            h1.heading--1.text-center Почему Redstar Agency?
+
+            -var advantagesItemList = [{icon: 'icon1', title: 'Собственное производство в России', text: 'Позволяет поставлять сайты в самые короткие сроки'}, {icon: 'icon2', title: 'Проведём мастер-классы', text: 'Это весело'}, {icon: 'icon3', title: 'Постоянное наличие сайтов на складе', text: 'Понравившегося сайт не придётся ждать неделями'}, {icon: 'icon4', title: 'Постоянное обновление систем обеспечения', text: 'Всегда можно найти чем привлечь новую аудиторию'}, {icon: 'icon5', title: 'Прямые поставки в любой город России', text: 'Не важно, где вы находитесь. Мы доставим сайт в любое удобное вам место.'}, {icon: 'icon6', title: 'Персональный менеджер', text: 'Всегда в курсе деталей вашего проекта и ему не нужно объяснять по нескольку раз одно и то же'}]
+            ul.advantages
+                include ../00_mixins/__advantages-item
+                for advantagesItem in advantagesItemList
+                    +advantages-item(advantagesItem)
+
+                //= advantages item 1 =
+                //li.advantages__item
+                //    .whyRS
+                //        .whyRS__asside
+                //            img.whyRS__img(src='images/icons/icon1.png' alt='')
+                //        .whyRS__cnt
+                //            .whyRS__title Собственное производство в России
+                //            .whyRS__text Позволяет поставлять сайты в самые короткие сроки
+
+
+    //= Section 3 .well__index--3 =
+    section.well__index--3
+        //= container =
+        .container
+            h3.heading--3.text-center Каталог сайтов
+            .catallog-card-wraper
+                -for( var i = 0; i < 8; i++ )
+                    a.catallog-card.text-center
+                        .catallog-card__head
+                            .catallog-card__img
+                                img(src='images/catalog/item1.png' alt='')
+                        .catallog-card__midle
+                            .catallog-card__title Улитка на прогулке
+                            .catallog-card__text Творческие наборы
+                            .catallog-card__price 520
+                                span.catallog-card__fa-ruble
+
+                        .catallog-card__footer
+                            .catallog-card__info Подробнее о товаре
+                .catallog-card__btn
+                    a.btn.btn--type1(type="submit") Посмотреть полный каталог
+
+
+
+
+
+    //= Section 4 .well__index--4 =
+    section.well__index--4.bg-lightBlue
+        //= container =
+        .container
+            h2.heading--2.text-center Узнать условия сотрудничества
+            p.seoText.text-center Мы рады любым клиентам: розничным магазинам, интернет магазинам, крупным торговым сетям. Для каждого клиента мы подберем оптимальные условия работы. Свяжитесь с нами, мы обязательно договоримся.
+            form.form(action="#" method="post")
+                .form-group
+                    span Имя
+                    label.placeholder-color.placeholder-effect2
+                        input.form-input(type="text" name="name" placeholder="Ваше имя" required)
+                .form-group
+                    span Телефон
+                    label.placeholder-color
+                        input.form-input(type="phone" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required)
+                .form-group
+                    span E-mail
+                    label.placeholder-color.placeholder-effect2
+                        input.form-input(type="email" id="mail" name="email" placeholder="Ваш E-mail" required)
+
+                .form__btn
+                    a.btn.btn--type3(name="submit" id="submit") Отправить заявку
+                button.hide(type="submit")

@@ -1,0 +1,8 @@
+mixin advantages-item(advantagesItem)
+    li.advantages__item
+        .whyRS
+            .whyRS__asside
+                img.whyRS__img(src='images/icons/'+ advantagesItem.icon +'.png' alt='')
+            .whyRS__cnt
+                .whyRS__title !{advantagesItem.title}
+                .whyRS__text !{advantagesItem.text}

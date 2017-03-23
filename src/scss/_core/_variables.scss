@@ -1,0 +1,36 @@
+//========================================================
+//                     Variables
+//=========================================================
+
+// Resolutions
+$screen-xs-min: 576px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+// Fonts
+$fa: 'FontAwesome';
+
+$default-font-family: 'GothamPro';
+$OpenSans-font-family: 'Open Sans', sans-serif;
+$default-font-weight: 400;
+$default-font-size: 16px;
+$default-line-height: 1.44;
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$default: #333333;
+$grey: #5d5d5d;
+
+$primary: #f3295d;
+
+
+$header-color: $black;
+$header-bg: $white;
+
+$content-color: $grey;
+$content-bg: $white;
+
+$footer-color: $grey;
+$footer-bg: $white;

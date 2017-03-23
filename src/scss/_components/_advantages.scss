@@ -1,0 +1,19 @@
+/*
+* @section      Components
+* @Components	Advantages
+*/
+
+.advantages{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: -30px -45px;
+	&__item{
+		width: calc(50% - (45px * 2));
+		margin: 30px 45px;
+	}
+}
+
+* + .advantages{
+	margin-top: 60px;
+}

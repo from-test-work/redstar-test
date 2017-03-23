@@ -1,0 +1,116 @@
+/*
+* @section      Components
+* @Components	Navigation
+*/
+.nav-panel__trigger{
+	position: relative;
+	bottom: 22px;
+	left: 50%;
+	z-index: 100;
+	display: none;
+	margin-left: -25px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	span{
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 8%;
+		background-color: $primary;
+		font-size: 0;
+		transition: background-color 0.3s;
+		-webkit-touch-callout: none;
+		user-select: none;
+		&:before{
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $primary;
+			content: '';
+			transition: transform 0.3s, background-color 0.3s;
+			transform: translateY(-250%);
+		}
+		&:after{
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $primary;
+			content: '';
+			transition: transform 0.3s, background-color 0.3s;
+			transform: translateY(250%);
+		}
+	}
+}
+
+
+.navigation {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	&__item{
+		position: relative;
+		font-size: 17px;
+		padding: 5px 0;
+		color: $black;
+		&:before{
+			position: absolute;
+			content: '';
+			background: #ccd6e4;
+			width: 4px;
+			height: 4px;
+			top: 50%;
+			//right: -20px;
+			left: -2em;
+			border-radius: 50%;
+			transform: translateY(-50%);
+		}
+		&:first-child:before{
+			display: none;
+		}
+	}
+	&__link{}
+}
+
+
+@media (max-width: 1199px){
+	.navigation {
+		&__item{
+			&:before{
+				left: -1em;
+			}
+		}
+	}
+}
+
+@media (max-width: 991px){
+	.well__navigation{
+		padding-bottom: 20px;
+	}
+
+	.nav-panel__trigger{
+		display: block;
+	}
+	.navigation{
+		visibility: hidden;
+		opacity: 0;
+		height: 0;
+		transition: .3s all ease;
+		flex-direction: column;
+		align-items: flex-start;
+		&--isOpen{
+			visibility: visible;
+			opacity: 1;
+			height: 100%;
+		}
+		&__item{
+			&:before{
+				display: none;
+			}
+		}
+	}
+}
