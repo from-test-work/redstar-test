@@ -19,7 +19,7 @@ main.page-content
                         .slider__title Оптовая продажа сайтов для творчества
                         .slider__text Гармонический интервал синхронно диссонирует композиционный рефрен, таким образом, сходные законы контрастирующего развития&nbsp;характерны и для процессов в психике
                         .slider__btn
-                            a.btn.btn--type2 Заказать звонок
+                            a.btn.btn--type2(href="#scrollto" data-scroll-to="#scrollto") Заказать звонок
 
     //= Section 2 .well__index--2 =
     section.well__index--2.bg-lightBlue
@@ -66,13 +66,10 @@ main.page-content
                     a.btn.btn--type1(type="submit") Посмотреть полный каталог
 
 
-
-
-
     //= Section 4 .well__index--4 =
     section.well__index--4.bg-lightBlue
         //= container =
-        .container
+        .container(id="#scrollto")
             h2.heading--2.text-center Узнать условия сотрудничества
             p.seoText.text-center Мы рады любым клиентам: розничным магазинам, интернет магазинам, крупным торговым сетям. Для каждого клиента мы подберем оптимальные условия работы. Свяжитесь с нами, мы обязательно договоримся.
             form.form(action="#" method="post")

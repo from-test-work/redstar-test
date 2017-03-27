@@ -88,4 +88,14 @@ $(document).ready(function () {
         return false;
     });
 });
+
+// Плавный переход к секции
+$(document).ready(function () {
+    $('a[href^="#"]').click(function () {
+        var el = $(this).attr('href');
+        $('body').animate({
+            scrollTop: $(el).offset().top }, 1500);
+        return false;
+    });
+});
 //# sourceMappingURL=script.js.map

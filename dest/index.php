@@ -89,7 +89,9 @@ include_once ('php/db.php');
 									</ul>
 									<div class="slider__title">Оптовая продажа сайтов для творчества</div>
 									<div class="slider__text">Гармонический интервал синхронно диссонирует композиционный рефрен, таким образом, сходные законы контрастирующего развития&nbsp;характерны и для процессов в психике</div>
-									<div class="slider__btn"><a class="btn btn--type2">Заказать звонок</a></div>
+									<div class="slider__btn">
+										<a class="btn btn--type2" data-scroll-to="#scroll-to" href="#scroll-to">Заказать звонок</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -156,7 +158,7 @@ include_once ('php/db.php');
 				<section class="well__index--4 bg-lightBlue">
 					<!--= container =-->
 					<div class="container">
-						<h2 class="heading--2 text-center">Узнать условия сотрудничества</h2>
+						<h2 class="heading--2 text-center" id="scroll-to">Узнать условия сотрудничества</h2>
 						<p class="seoText text-center">Мы рады любым клиентам: розничным магазинам, интернет магазинам, крупным торговым сетям. Для каждого клиента мы подберем оптимальные условия работы. Свяжитесь с нами, мы обязательно договоримся.</p>
 						<form class="form" action="#" method="post">
 							<div class="form-group"><span>Имя</span>
